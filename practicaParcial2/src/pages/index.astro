@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Prueba from "../components/vue/Prueba.vue";
+import Component1 from "../components/vue/Componente1.vue";
+import ToDo from "../components/vue/ToDo.vue"
+import Componente2 from "../components/vue/Componente2.vue";
+import Lista from "../components/vue/Lista.vue";
+import Componente3 from "../components/vue/Componente3.vue"
+import Componente4 from "../components/vue/Componente4.vue"
+---
+
+<Layout title="Welcome to Astro.">
+	<Prueba client:load/>
+	<div class="border-b-4 mb-8"></div>
+	<Component1 client:load/>
+	<div class="border-b-4 mt-8"></div>
+	<ToDo client:load/>
+	<div class="border-b-4 mt-8"></div>
+	<Componente2 client:load/>
+	<div class="border-b-4"></div>
+	<Lista client:load/>
+	<div class="border-b-4 mt-8"></div>
+	<Componente3 client:load/>
+	<div class="border-b-4 mt-8"></div>
+	<Componente4 client:load/>
+	<div class="border-b-4 mt-8"></div>
+</Layout>

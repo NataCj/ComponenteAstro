@@ -1,0 +1,294 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { title } = Astro.props;
+const products = [
+	{
+		icon: "",
+		name: "producto 1",
+	},
+	{
+		icon: "",
+		name: "producto 2",
+	},
+	{
+		icon: "",
+		name: "producto 3",
+	},
+];
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="bg-zinc-800">
+			<div class="container flex justify-around max-w-full m-auto">
+				<img src="/public/AliExpres-logo.webp" class="h-[61px] ml-10" />
+
+				<div class="my-auto relative">
+					<input
+						type="search"
+						placeholder="buscar..."
+						class="h-9 rounded-full pl-5 outline-none w-[960px]"
+					/>
+					<div
+						class="bg-zinc-800 inline-block right-1 top-1 text-white rounded-xl px-2 absolute"
+					>
+						<Icon name="mdi:search" class="size-7" />
+					</div>
+				</div>
+
+				<div
+					class="text-white flex items-center justify-around container"
+				>
+					<div class="flex">
+						<Icon name="mdi:qrcode" class="size-8" />
+						<div class="ml-2">
+							<div class="relative leading-3">
+								Descarga la app
+							</div>
+							<div>de aliexpress</div>
+						</div>
+					</div>
+					<div class="flex">
+						<Icon name="flagpack:co" class="text-xl my-auto" />
+						<div class="ml-2">
+							<div class="relative leading-3">es/</div>
+							<div class="text-sm">COP</div>
+						</div>
+					</div>
+					<div class="flex">
+						<Icon
+							name="mdi:user-outline"
+							class="text-3xl my-auto"
+						/>
+						<div>
+							<div class="">Welcome</div>
+							<div class="relative leading-3 text-sm">
+								sign In / Register
+							</div>
+						</div>
+					</div>
+					<div class="flex">
+						<Icon name="mdi:cart-outline" class="text-3xl" />
+
+						<div>
+							<div class="bg-white w-6 h-4 rounded">
+								<div class="text-center text-black text-sm">
+									0
+								</div>
+							</div>
+							<div class="">cart</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="bg-zinc-800 container max-w-full justify-center flex flex-wrap gap-1"
+		>
+			<div
+				class="container flex justify-around text-white mb-2 items-center"
+			>
+				<a
+					href="#"
+					class="h-10 text-lg rounded-full border-2 text-center px-4 relative flex group"
+				>
+					<Icon name="mdi:menu" class="m-auto top-7" />
+					<h2 class="m-auto">Todas las categorias</h2>
+
+					<menu
+						class="hidden group-hover:block absolute bg-zinc-800 w-full left-0 top-7"
+					>
+						<ul>
+							<li>opcion 1</li>
+							<li>opcion 2</li>
+							<li>opcion 3</li>
+							<li>Opcion 4</li>
+						</ul>
+					</menu>
+				</a>
+				<a href="h-10 text-lg pt-[6px]">NN</a>
+				<a href="h-10 text-lg pt-[6px]">Bestsellers</a>
+				<a href="h-10 text-lg pt-[6px]">Top Brands</a>
+				<a href="h-10 text-lg pt-[6px]">Home & Garden</a>
+				<a href="h-10 text-lg pt-[6px]">Hair Extensions & Wigs</a>
+				<a href="h-10 text-lg pt-[6px]">Men's Clothing</a>
+				<a href="h-10 text-lg pt-[6px]">Accesories</a>
+				<a href="h-10 text-lg pt-[6px]">Consumer Electronics</a>
+				<a href="h-10 text-lg pt-[6px]">More</a>
+			</div>
+		</div>
+		<div class="max-w-[90%] m-auto h-40 flex">
+			<div class="w-[20%] my-auto text-3xl font-semibold">
+				<div>Better choises,</div>
+				<div>better prices</div>
+			</div>
+			<div class="flex w-[80%] my-auto">
+				<div class="mx-9 my-auto">
+					<Icon name="mdi:attach-money" class="m-auto text-3xl" />
+					<div class="text-lg font-semibold">value for money</div>
+				</div>
+				<div class="mx-9">
+					<Icon name="mdi:users-outline" class="m-auto text-3xl" />
+					<div class="text-lg font-semibold">shoppers worldwide</div>
+				</div>
+				<div class="mx-9">
+					<Icon
+						name="mdi:truck-delivery-outline"
+						class="m-auto text-3xl"
+					/>
+					<div class="text-lg font-semibold">fast delivery</div>
+				</div>
+				<div class="mx-9">
+					<Icon
+						name="mdi:credit-card-outline"
+						class="m-auto text-3xl"
+					/>
+					<div class="text-lg font-semibold">safe payments</div>
+				</div>
+				<div class="mx-9">
+					<Icon name="mdi:sun-protection" class="m-auto text-3xl" />
+					<div class="text-lg font-semibold">Buyer protection</div>
+				</div>
+				<div class="mx-9">
+					<Icon
+						name="mdi:cellphone-arrow-down"
+						class="m-auto text-3xl"
+					/>
+					<div class="text-lg font-semibold">
+						dowland the Aliexpress app
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class=" grid grid-cols-3 bg-red-600 h-[550px] w-[90%] m-auto gap-2">
+			<div class="">
+				<div class="h-[30%]  bg-slate-400 ">
+					<div class=" bg-red-500 h-[100%] rounded-3xl">sd</div>
+				</div>
+				<div class="h-[70%] bg-yellow-400">hf</div>
+			</div >
+			<div class=" bg-yellow-300">absdvb</div>
+			<div class=" bg-orange-500">
+				<div class="h-[55%] bg-blue-500 "></div>
+				<div class="h-[45%] bg-pink-800"></div>
+			</div> -->
+
+		<div class="grid grid-cols-9 grid-rows-7 gap-2 w-[90%] m-auto">
+			<div class="bg-slate-200 col-span-2 row-span-2 min-h-40 rounded-3xl p-3 ">
+				<div class="flex justify-around mt-6  text-center font-semibold text-xl">
+					<div class="bg-black text-white  w-[40%] rounded-3xl p-2">Register</div>
+					<div class="border-[1px] border-black bg-white w-[40%] rounded-3xl p-2">Sign in</div>
+				</div>
+				<div class="text-center p-2">Or continue with</div>
+				<div class="flex text-3xl text-center justify-center">
+					<Icon name="mdi:facebook" class="text-blue-600 mr-2" />
+					<Icon name="mdi:google" class="text-red-700 mr-2"/>
+					<Icon name="mdi:twitter" class="text-white rounded-full p-2 bg-blue-400 mr-3 "/>
+					<Icon name="mdi:apple" class="text-white bg-black rounded-full p-1 "/>
+				</div>
+			</div>
+			<div class="bg-pink-400 col-span-3 row-span-7 min-h-40 rounded-3xl ">
+				<div class=" text-3xl font-semibold text-red-600 bg-yellow-500 ml-6">Betsellers</div>
+				<div class="ml-6 mb-5">Get discounts on popular items</div>
+				<div class="flex bg-red-800 max-w-full">
+					<div class=" w-[50%] h-96  bg-[url('/public/Betsellers.webp')] rounded-3xl " >asf</div>
+					<div class="bg-yellow-400 w-[50%]">
+						<div>sdf</div>
+						<div>sdf</div>
+					</div>
+				</div>
+			</div>
+			<div class="bg-pink-400 col-span-4 row-span-4 min-h-40 rounded-3xl">
+				caja3
+			</div>
+			<div class="bg-pink-400 col-span-2 row-span-5 min-h-40 rounded-3xl">
+				caja4
+			</div>
+			<div class="bg-pink-400 col-span-4 row-span-3 min-h-40 rounded-3xl">
+				caja5
+			</div>
+		</div>
+	</body>
+	<div class="container banner">banner</div>
+	<nav class="container main_menu">
+		<a href="/">Inicio</a>
+		<a href="/productos">Productos</a>
+	</nav>
+	<div class="container product_list">
+		{
+			products.map((product) => (
+				<div>
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAalJREFUSEvt1b9Ll1EUBvCPFDQkDUW0tGRTv5YKLAhCtISKdqHBmgqyJRz6C5qaKlDBwcV/QCGiQsGliIaisCVxcYkWQYIiyPfE+dKbfPW+3+G7dZcX3nvufZ7znPPc06PLq6fL9ysBnMFFXMIQdiehX3iBl3iF99sR3Q5gLx7jZsMMp3APP7bGtwM4WLFewIk88ATP8AYbeUEvzuMK7mZm7zCI9TpIO4BZjOATrmMFwxVIP47m4S8J+BzHMI8+BJmxEkAw2IcjWM3gj5lR/WwQOJk/TiMyWMPhEsDvDDiO5YYAp/AhY/9RpZ1ELYDPuNpQormafI0BglB0RXRTFPk1vifLkPAcruFOrX1juzHAA4xjf6FVv+ERHnYqUTDZUxV6tDLUhSxydExIGLWJIi9VzTCDn/m/owxKLt+aWKt2jSX6D/BHwp180DWJou0OoO7k0qPacvJXHCo9FdO4hbqTdwKI1m05eRK3SwBhrEUEq06c/DYHU/G5DgIxcCZwo6RN7j/F/aYDp37nWQzgcn535WZkFrMgBlOMzXjO265OO6VhQn/Dug6wCfCMXxmxPSXiAAAAAElFTkSuQmCC" />
+					{product.name}
+				</div>
+			))
+		}
+	</div>
+	<div class="container categories">categorias</div>
+
+	<div class="container">
+		<slot />
+	</div>
+
+	<div class="container footer">Este es el footer</div>
+</html>
+
+<style is:global>
+	.main_menu a:hover {
+		background: #ff5a39;
+	}
+
+	.product_list {
+		display: flex;
+		height: 80px;
+	}
+
+	.product_list div {
+		height: 100%;
+		display: flex;
+		text-align: center;
+		max-width: 120px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid rgb(194, 194, 194);
+		border-radius: 4px;
+		margin-right: 3px;
+	}
+
+	.categories {
+		height: 80px;
+	}
+	.footer {
+		height: 120px;
+	}
+
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: system-ui, sans-serif;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style>
